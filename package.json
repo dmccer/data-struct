@@ -1,0 +1,25 @@
+{
+  "name": "data-struct",
+  "version": "0.0.1",
+  "description": "data-struct",
+  "main": "stack.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha test/stack.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:dmccer/data-struct.git"
+  },
+  "keywords": [
+    "data-struct"
+  ],
+  "author": "Kane",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dmccer/data-struct/issues"
+  },
+  "homepage": "https://github.com/dmccer/data-struct"
+}
