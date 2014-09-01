@@ -76,5 +76,20 @@ describe('数据结构', function () {
                 assert.equal(2, stack.size, 'size = 2');
             });
         });
+
+        describe('.clear()', function () {
+            it('should return 0 when clear a non-empty stack', function () {
+                stack.push(1);
+                stack.push(2);
+                stack.push(3);
+
+                assert.equal(3, stack.size, 'has 3 datas');
+
+                stack.clear();
+
+                assert.equal(0, stack.size, 'cleared, size is 0');
+                assert.equal(null, stack.peek(), 'top is null');
+            });
+        });
     });
 });
