@@ -7,16 +7,20 @@ var Stack = require('../stack');
 
 describe('数据结构', function () {
     describe('Stack', function () {
+        var stack;
+
+        beforeEach(function () {
+            stack = new Stack();
+        });
+
         describe('.size', function () {
             it('should return 0 when init', function () {
-                var stack = new Stack();
                 assert.equal(0, stack.size, 'init stack size == 0');
             });
         });
 
         describe('.push()', function () {
             it('should push the data into the stack', function () {
-                var stack = new Stack();
                 var data = {
                     a: 1,
                     b: 2
@@ -30,15 +34,32 @@ describe('数据结构', function () {
             });
         });
 
+        describe('.peek()', function () {
+            it('should return null when stack is empty', function () {
+                assert.isNull(stack.peek(), 'null, empty stack');
+            });
+
+            it('should return top data of the stack', function () {
+                var data = {
+                    a: 1,
+                    b: 2
+                };
+
+                stack.push(1);
+                stack.push(2);
+
+                stack.push(data);
+
+                assert.deepEqual(data, stack.peek(), 'deep equal the top data');
+            });
+        });
+
         describe('.pop()', function () {
             it('should return false when stack is empty', function () {
-                var stack = new Stack();
-
                 assert.isFalse(stack.pop(), 'false, empty stack');
             });
-            it('should pop the top of the stack', function () {
-                var stack = new Stack();
 
+            it('should pop the top of the stack', function () {
                 var dA = 1;
                 var dB = 2;
                 var dC = 3;
