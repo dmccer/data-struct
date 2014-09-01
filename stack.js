@@ -1,7 +1,7 @@
 var Stack = function () {
     this.size = 0;
     this.top = null;
-}
+};
 
 Stack.prototype = {
     constructor: Stack,
