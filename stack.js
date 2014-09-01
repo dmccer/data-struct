@@ -26,7 +26,7 @@ Stack.prototype = {
         this.top = top.next;
         this.size--;
 
-        return top;
+        return top.data;
     },
 
     peek: function () {
