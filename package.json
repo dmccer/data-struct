@@ -2,12 +2,12 @@
   "name": "data-struct",
   "version": "0.0.1",
   "description": "data-struct",
-  "main": "stack.js",
+  "main": "./stack/index.js",
   "directories": {
     "test": "test"
   },
   "scripts": {
-    "test": "mocha test/stack.js"
+    "test": "mocha test/"
   },
   "repository": {
     "type": "git",
@@ -22,7 +22,8 @@
     "url": "https://github.com/dmccer/data-struct/issues"
   },
   "homepage": "https://github.com/dmccer/data-struct",
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
     "chai": "^1.9.1"
   }
 }
