@@ -30,13 +30,13 @@ describe('数据结构', function () {
 
                 stack.push(data);
                 assert.equal(1, stack.size);
-                assert.deepEqual(data, stack.top.data, 'the stack pushed the data ok');
+                assert.deepEqual(data, stack._top.data, 'the stack pushed the data ok');
             });
         });
 
-        describe('.peek()', function () {
+        describe('.top()', function () {
             it('should return null when stack is empty', function () {
-                assert.isNull(stack.peek(), 'null, empty stack');
+                assert.isNull(stack.top(), 'null, empty stack');
             });
 
             it('should return top data of the stack', function () {
@@ -50,7 +50,7 @@ describe('数据结构', function () {
 
                 stack.push(data);
 
-                assert.deepEqual(data, stack.peek(), 'deep equal the top data');
+                assert.deepEqual(data, stack.top(), 'deep equal the top data');
             });
         });
 
@@ -88,7 +88,7 @@ describe('数据结构', function () {
                 stack.clear();
 
                 assert.equal(0, stack.size, 'cleared, size is 0');
-                assert.equal(null, stack.peek(), 'top is null');
+                assert.equal(null, stack.top(), 'top is null');
             });
         });
     });

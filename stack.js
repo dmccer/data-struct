@@ -1,15 +1,15 @@
 var Stack = function () {
     this.size = 0;
-    this.top = null;
+    this._top = null;
 };
 
 Stack.prototype = {
     constructor: Stack,
 
     push: function (data) {
-        var top = this.top;
+        var top = this._top;
 
-        this.top = {
+        this._top = {
             data: data,
             next: top
         };
@@ -22,20 +22,20 @@ Stack.prototype = {
             return false;
         }
 
-        var top = this.top;
-        this.top = top.next;
+        var top = this._top;
+        this._top = top.next;
         this.size--;
 
         return top.data;
     },
 
-    peek: function () {
-        return this.top ? this.top.data : null;
+    top: function () {
+        return this._top ? this._top.data : null;
     },
 
     clear: function () {
         this.size = 0;
-        this.top = null;
+        this._top = null;
     }
 };
 
